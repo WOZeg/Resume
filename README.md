@@ -33,8 +33,7 @@ Open the [hosted template](https://www.overleaf.com/latex/templates/russelresume
 
 Everything you edit lives in `content/`. Three things cover most of it:
 
-1. **Your details** — `content/personal-info.tex`: your name, contact details, and links (`\name`, `\email`, `\github`, …). To add a photo, uncomment the `\photo{...}` line and point it at your image (a `profile.png` is included — swap in your own).
-2. **Each section's text** — the files in `content/` (one per section). Change the words; keep the commands.
+1. **Your details** — `content/personal-info.tex`: your name, contact details, and links (`\name`, `\email`, `\github`, …).2. **Each section's text** — the files in `content/` (one per section). Change the words; keep the commands.
 3. **Which sections show, and their order** — the `\input{...}` list near the bottom of `resume.tex`. Comment a line out to hide a section; reorder the lines to reorder the CV.
 
 ### Section building blocks
