@@ -47,4 +47,3 @@
 \input{lib/templates/experience.tex}
 \input{lib/templates/projects.tex}
 \input{lib/templates/cover-letter.tex}
-\input{lib/templates/publications.tex}

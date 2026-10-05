@@ -29,8 +29,6 @@ Open the [hosted template](https://www.overleaf.com/latex/templates/russelresume
 
    [`latexmk`](https://ctan.org/pkg/latexmk) just runs LaTeX the right number of times. No `latexmk`? Run `xelatex resume.tex` twice — the second pass resolves page numbers and links.
 
-Only the **Publications** section needs anything extra: it uses BibLaTeX, so the `biber` tool must be present (it ships with TeX Live and MacTeX, and `latexmk` runs it for you). Not using Publications? [Turn it off](#turn-a-section-off) and you won't need `biber` at all.
-
 # $\color[RGB]{250,100,122} Making\ it\ yours$
 
 Everything you edit lives in `content/`. Three things cover most of it:
@@ -52,7 +50,6 @@ When you edit a section, these are the commands it's built from:
 | Languages | `cvlanguages` | `\cvlanguage{language}{proficiency}` |
 | Interests | `cvinterests` | `\cvinterest{interest}{description}` |
 | Achievements | `cvhonors` | `\cvhonor{award}{event}{location}{date}` |
-| Publications | `content/references.bib` | BibTeX entries, cited with `\nocite{...}` |
 
 Two extras for richer entries: `\cvrole{position}{date}` adds another role inside a single `\cventry` (same employer, multiple titles), and `\cvproject{title}{year}{url}` is a lighter project heading with an optional link.
 
@@ -80,10 +77,8 @@ Two extras for richer entries: `\cvrole{position}{date}` adds another role insid
 Don't need a section? Comment out its line in `resume.tex`:
 
 ```latex
-% \input{content/publications.tex}
+% \input{content/interests.tex}
 ```
-
-For **Publications** specifically, also comment out `\addbibresource{content/references.bib}` in the preamble — then the build no longer needs `biber`.
 
 ### Change the look
 
@@ -108,8 +103,7 @@ content/                # your actual CV data — edit these
   header.tex            # header invocation
   footer.tex            # footer invocation
   summary.tex, education.tex, experience.tex, projects.tex, skills.tex,
-  achievements.tex, publications.tex, interests.tex, languages.tex
-  references.bib        # bibliography entries for the Publications section
+  achievements.tex, interests.tex, languages.tex
 ```
 
 To edit your CV, change the files in `content/`. To restyle the template, edit `lib/`.
